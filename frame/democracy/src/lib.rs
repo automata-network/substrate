@@ -167,6 +167,7 @@ use sp_runtime::{
 	ArithmeticError, DispatchError, DispatchResult, RuntimeDebug,
 };
 use sp_std::prelude::*;
+use log::info;
 
 mod conviction;
 mod types;
@@ -544,6 +545,8 @@ pub mod pallet {
 		PreimageReaped(T::Hash, T::AccountId, BalanceOf<T>, T::AccountId),
 		/// A proposal \[hash\] has been blacklisted permanently.
 		Blacklisted(T::Hash),
+		///
+		DebugEvent(BalanceOf<T>),
 	}
 
 	#[pallet::error]
@@ -1566,6 +1569,8 @@ impl<T: Config> Pallet<T> {
 			voting.rejig(frame_system::Pallet::<T>::block_number());
 			voting.locked_balance()
 		});
+		info!("lock_needed: {:?}", lock_needed);
+		Self::deposit_event(Event::<T>::DebugEvent(lock_needed));
 		if lock_needed.is_zero() {
 			T::Currency::remove_lock(DEMOCRACY_ID, who);
 		} else {
