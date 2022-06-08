@@ -3383,8 +3383,7 @@ dependencies = [
 [[package]]
 name = "libsecp256k1"
 version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9d220bc1feda2ac231cb78c3d26f27676b8cf82c96971f7aeef3d0cf2797c73"
+source = "git+https://github.com/smilenow/libsecp256k1.git?branch=v0.6.0-update#81b525072c7481f1621d160eb75aee0d75352ae6"
 dependencies = [
  "arrayref",
  "base64 0.12.3",
@@ -3402,8 +3401,7 @@ dependencies = [
 [[package]]
 name = "libsecp256k1-core"
 version = "0.2.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0f6ab710cec28cef759c5f18671a27dae2a5f952cdaaee1d8e2908cb2478a80"
+source = "git+https://github.com/smilenow/libsecp256k1.git?branch=v0.6.0-update#81b525072c7481f1621d160eb75aee0d75352ae6"
 dependencies = [
  "crunchy",
  "digest 0.9.0",
@@ -3413,8 +3411,7 @@ dependencies = [
 [[package]]
 name = "libsecp256k1-gen-ecmult"
 version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccab96b584d38fac86a83f07e659f0deafd0253dc096dab5a36d53efe653c5c3"
+source = "git+https://github.com/smilenow/libsecp256k1.git?branch=v0.6.0-update#81b525072c7481f1621d160eb75aee0d75352ae6"
 dependencies = [
  "libsecp256k1-core",
 ]
@@ -3422,8 +3419,7 @@ dependencies = [
 [[package]]
 name = "libsecp256k1-gen-genmult"
 version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67abfe149395e3aa1c48a2beb32b068e2334402df8181f818d3aee2b304c4f5d"
+source = "git+https://github.com/smilenow/libsecp256k1.git?branch=v0.6.0-update#81b525072c7481f1621d160eb75aee0d75352ae6"
 dependencies = [
  "libsecp256k1-core",
 ]
